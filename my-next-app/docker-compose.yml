@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  app1:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - REDIS_HOST=redis # This will override .env
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:

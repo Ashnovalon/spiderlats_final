@@ -1,0 +1,8 @@
+for files upload,download:
+api route is there,
+should make supabase bucket properly,
+add the bucket links to env,
+add frontend features to select.
+
+nginx/haproxy for reverseproxy,
+dockerizing
